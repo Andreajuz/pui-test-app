@@ -1,4 +1,4 @@
-/* Page 1 */
+/* Cover Page */
 
 body {
     margin-top: 50px;
@@ -44,7 +44,6 @@ body {
     font-size: 18px;
     background-color: black;
     color: white;
-    font-size: 18px;
     font-family: Helvetica;
     text-align: center;
     letter-spacing: 0.2px;
@@ -64,7 +63,7 @@ body {
     margin-top: -60px;
 }
 
-/* Page 2*/
+/* Page 1*/
 
 #sideBar2 {
     display: block;
@@ -106,12 +105,22 @@ body {
 
 .imgColumn {
     flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h3 {
+    text-align: center;
 }
 
 .imgRow {
-    display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
 }
 
 #couchPillow {
@@ -122,6 +131,7 @@ body {
 #couchPillowText {
     font-size: 18px;
     font-family: Helvetica;
+    font-weight: normal;
 }
 
 #bedPillow {
@@ -132,6 +142,7 @@ body {
 #bedPillowText {
     font-size: 18px;
     font-family: Helvetica;
+    font-weight: normal;
 }
 
 #roundPillow {
@@ -142,6 +153,7 @@ body {
 #roundPillowText {
     font-size: 18px;
     font-family: Helvetica;
+    font-weight: normal;
 }
 
 #floorPillow {
@@ -152,4 +164,162 @@ body {
 #floorPillowText {
     font-size: 18px;
     font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 2*/
+
+#number2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowColor {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h4 {
+    text-align: center;
+}
+
+.imgRow {
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
+}
+
+#morningHaze {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#morningHazeText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#afterSchoolSpecial {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#afterSchoolSpecialText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#cozyDenim {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#cozyDenimText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#rainyDay {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#rainyDayText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 3*/
+
+#number3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowMaterial {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+#duckDownButton {
+    font-size: 18px;
+    /*background-image: url("Duck Down.jpeg");*/
+    color:#535353;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+    border-style: solid;
+    border-color:#535353;
+}
+
+#hypoallergenicButton {
+    font-size: 18px;
+    background-color: white;
+    color:#535353;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +25px;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+    border-style: solid;
+    border-color:#535353;
+}
+
+#memoryFoamButton {
+    font-size: 18px;
+    background-color: white;
+    color:#535353;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +25px;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+    border-style: solid;
+    border-color:#535353;
 }
