@@ -1,0 +1,155 @@
+/* Page 1 */
+
+body {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+#sideBar {
+    margin-left: 50px;
+}
+
+#cart {
+    margin-right: 50px;
+    margin-left: auto;
+    float:right
+}
+
+#logoLarge {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +10px;
+}
+
+#customize {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+    margin-top: +80px;
+}
+
+#specialize {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#startButton {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 60px; 
+    border-style: solid;
+    border-color: black;
+}
+
+#pillows {
+    max-width: 100%;
+    height: auto;
+    margin-top: -60px;
+}
+
+/* Page 2*/
+
+#sideBar2 {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#logoSmall {
+    display: block;
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+#cart2 {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -32px;
+    float:right
+}
+
+#number1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowType {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+}
+
+.imgRow {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#couchPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#couchPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+#bedPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#bedPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+#roundPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#roundPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+#floorPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#floorPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+}
