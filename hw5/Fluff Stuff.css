@@ -1,8 +1,19 @@
 /* Cover Page */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    scroll-behavior: smooth;
     margin-top: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+}
+
+.section {
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #sideBar {
@@ -40,6 +51,7 @@ body {
     margin-top: -30px;
 }
 
+/*
 #startButton {
     font-size: 18px;
     background-color: black;
@@ -53,6 +65,25 @@ body {
     margin-top: +60px;
     border-radius: 10px;
     padding: 20px 60px; 
+    border-style: solid;
+    border-color: black;
+}
+*/
+
+#startButton2 {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 20px; 
     border-style: solid;
     border-color: black;
 }
@@ -75,6 +106,14 @@ body {
     display: block;
     margin-left: 100px;
     margin-top: -25px;
+}
+
+.back_icon {
+    display: block;
+    margin-right: 170px;
+    margin-left: auto;
+    margin-top: -33px;
+    float: right;
 }
 
 #cart2 {
@@ -120,6 +159,7 @@ body {
     position: relative;
     /*margin-left: 50px;
     margin-right: 50px;*/
+    overflow: scroll;
 }
 
 #couchPillow {
@@ -203,6 +243,7 @@ body {
     position: relative;
     /*margin-left: 50px;
     margin-right: 50px;*/
+    overflow: scroll;
 }
 
 #morningHaze {
@@ -269,55 +310,31 @@ body {
     text-align: center;
 }
 
-#duckDownButton {
-    font-size: 18px;
-    /*background-image: url("Duck Down.jpeg");*/
-    color:#535353;
-    font-family: Helvetica;
+.material_buttons {
+    display: block;
+    width: 400px;
+    height: 70px;
     text-align: center;
+    font-size: 18px;
+    opacity: 0.65;
+    color: black;
+    font-family: Helvetica;
     letter-spacing: 0.2px;
-    display:block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    width: 400px;
-    height: 70px;
-    border-style: solid;
-    border-color:#535353;
+    border-style: hidden;
+}
+
+#duckDownButton { 
+    background-image: url("Images/Duck\ Down.jpeg");
 }
 
 #hypoallergenicButton {
-    font-size: 18px;
-    background-color: white;
-    color:#535353;
-    font-family: Helvetica;
-    text-align: center;
-    letter-spacing: 0.2px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+    background-image: url("Images/Hypoallergenic.jpeg");
     margin-top: +25px;
-    border-radius: 10px;
-    width: 400px;
-    height: 70px;
-    border-style: solid;
-    border-color:#535353;
 }
 
 #memoryFoamButton {
-    font-size: 18px;
-    background-color: white;
-    color:#535353;
-    font-family: Helvetica;
-    text-align: center;
-    letter-spacing: 0.2px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+    background-image: url("Images/Memory\ Foam.jpeg");
     margin-top: +25px;
-    border-radius: 10px;
-    width: 400px;
-    height: 70px;
-    border-style: solid;
-    border-color:#535353;
-}

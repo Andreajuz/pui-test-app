@@ -29,14 +29,16 @@
 
 /* grid */
 
+/*
 .grid > div{
-    /*background-color: lightgrey;*/
-    /*padding: 1em;*/
+    background-color: lightgrey;
+    padding: 1em;
 }
 
 .grid > div:nth-child(odd) {
-    /*background-color: grey;*/
+    background-color: grey;
 }
+*/
 
 .grid {
     display: grid;
