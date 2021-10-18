@@ -1,0 +1,263 @@
+/* top */
+
+#sideBar2 {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#logoSmall {
+    display: block;
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+#back {
+    display: block;
+    margin-left: auto;
+    margin-right: 180px;
+    margin-top: -32px;
+}
+
+#cart2 {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -20px;
+    float:right;
+}
+
+/* grid */
+
+/*
+.grid > div{
+    background-color: lightgrey;
+    padding: 1em;
+}
+
+.grid > div:nth-child(odd) {
+    background-color: grey;
+}
+*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 12.5% 40% 48%;
+    /*
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    */
+    grid-gap: 1em;
+}
+
+/* Columns */
+
+.leftColumn {
+    display: grid;
+    grid-template-rows: repeat(3, 135px);
+    margin-left: 50px;
+    margin-top: 70px;
+    position: relative;
+}
+
+/*
+.leftColumn > div{
+    border: #000000 1px, solid;
+}
+*/
+
+.middleColumn {
+    /*margin-left: 30px;*/
+    margin-top: 70px;
+    position: relative;
+}
+
+.rightColumn {
+    /*margin-left: 80px;*/
+    display: grid;
+    grid-template-rows: 10% 10% 20% 20% 20% 10%;
+    margin-top: 70px;
+    position: relative;
+}
+
+/* Details */
+
+#overall {
+    max-width: 80px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+}
+
+#zoomin {
+    max-width: 80px;
+}
+
+#stack {
+    max-width: 80px;
+}
+
+#overallLarge {
+    max-width: 380px;
+}
+
+#artisanRoundPillow {
+    font-size: 32px;
+    font-family: Georgia;
+    font-weight: lighter;
+    color: #535353;
+    margin-top: -0px;
+}
+
+.pricing {
+    font-size: 36px;
+    font-family: Georgia;
+    font-weight: lighter;
+    color: #535353;
+    margin-top: -10px;
+}
+
+#colorTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    margin-bottom: 10px;
+}
+
+#morningHaze {
+    background-color: #EBA492;
+    padding: 30px 30px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+}
+
+#afterSchoolSpecial {
+    background-color: #E79321;
+    padding: 30px 30px;
+    border: none;
+    margin-left: 10px;
+}
+
+#cozyDenim {
+    background-color: #1B3E55;
+    padding: 30px 30px;
+    border: none;
+    margin-left: 10px;
+}
+
+#rainyDay {
+    background-color: #AAC3C6;
+    padding: 30px 30px;
+    border: none;
+    margin-left: 10px;
+}
+
+#materialTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    margin-bottom: 10px
+}
+
+#duckDown {
+    background-color: white;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+}
+
+#hypoallergenic {
+    background-color: white;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#memoryFoam {
+    background-color: white;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#quantityTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353; 
+    margin-bottom: 10px
+}
+
+#minus {
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: lightgray;
+    background-color: lightgrey;
+    font-size: 14px;
+    color: #535353;
+    text-align: center;
+}
+
+#number {
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+    background-color:white;
+    font-size: 14px;
+    color: #535353;
+    text-align: center;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+#plus {
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: lightgray;
+    background-color: lightgrey;
+    font-size: 14px;
+    color: #535353;
+    text-align: center;
+}
+
+#addToCart {
+    width: 300px;
+    height: 60px;
+    background-color: #535353;
+    border-style: none;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+}
