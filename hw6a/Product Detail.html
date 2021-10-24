@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>Andrea Product Detail</title>
         <link href="Product Detail.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="Product Detail.js" defer></script>
     </head>
 
     <body>
@@ -14,14 +15,14 @@
         <div class="grid">
              <!--Left Column-->
             <div class="leftColumn">
-                <div class="imgRow">
-                    <img id="overall" src="Images/Overall.jpeg" alt="Pillow Overall">
+                <div>
+                    <img id="overall" class="imgRow" src="Images/Overall.jpeg" alt="Pillow Overall">
                 </div>
-                <div class="imgRow">
-                    <img id="zoomin" src="Images/Zoomin.jpeg" alt="Pillow Zoomin">
+                <div>
+                    <img id="zoomin" class="imgRow" src="Images/Zoomin.jpeg" alt="Pillow Zoomin">
                 </div>
-                <div class="imgRow">
-                    <img id="stack" src="Images/Stack.jpeg" alt="Pillow Stack">
+                <div>
+                    <img id="stack" class="imgRow" src="Images/Stack.jpeg" alt="Pillow Stack">
                 </div>
             </div>
             <!--Middle Column-->
@@ -39,24 +40,24 @@
                 <!--Color-->
                 <div class="color">
                     <span id="colorTitle">Color: Morning Haze</span>
-                    <button id="morningHaze" type="button"></button>
-                    <button id="afterSchoolSpecial" type="button"></button>
-                    <button id="cozyDenim" type="button"></button>
-                    <button id="rainyDay" type="button"></button>
+                    <img id="morningHaze" class="colorSquare" src="Images/Morning_Haze.png" alt="Morning Haze color square">
+                    <img id="afterSchoolSpecial" class="colorSquare" src="Images/After_School_Special.png" alt= "After School Special color square">
+                    <img id="cozyDenim" class="colorSquare" src="Images/Cozy_Denim.png" alt="Cozy Denim color square">
+                    <img id="rainyDay" class="colorSquare" src="Images/Rainy_Day.png" alt="Rainy Day color square">
                 </div>         
                  <!--Material-->
                 <div class="material">
                     <span id="materialTitle">Insert Material: Duck Down</span>
-                    <button id="duckDown" type="button">Duck Down</button>
-                    <button id="hypoallergenic" type="button">Hypoallergenic Poly-blend</button>
-                    <button id="memoryFoam" type="button">Memory Foam</button>
+                    <button id="duckDown" class="materialButton" type="button">Duck Down</button>
+                    <button id="hypoallergenic" class="materialButton" type="button">Hypoallergenic Poly-blend</button>
+                    <button id="memoryFoam" class="materialButton" type="button">Memory Foam</button>
                 </div>
                  <!--Quantity-->
                  <div class="quantity">
                     <span id="quantityTitle">Quantity:</span>
-                    <button id="minus" type="button">-</button>
+                    <button id="minus" class="addMinusButton" type="button">-</button>
                     <button id="number" type="button">1</button>
-                    <button id="plus" type="button">+</button>
+                    <button id="plus" class="addMinusButton" type="button">+</button>
                 </div>
                 <!--Add-->
                 <div class="add">
