@@ -14,17 +14,20 @@ body {
     height: 100vh;
     margin-left: 0px;
     margin-right: 0px;
+    padding-top: 70px;
 }
+
+/*#sideBar {
+    margin-left: 50px;
+}*/
 
 #sideBar {
+    display: block;
     margin-left: 50px;
+    margin-top: 50px;
+    max-width: 30px;
 }
 
-#cart {
-    margin-right: 50px;
-    margin-left: auto;
-    float:right
-}
 
 #logoLarge {
     display:block;
@@ -32,6 +35,43 @@ body {
     margin-right: auto;
     margin-top: +10px;
 }
+
+
+#cart {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -20px;
+    float:right;
+}
+
+/*#cart {
+    margin-right: 50px;
+    margin-left: auto;
+    float:right
+}*/
+
+#cartProductNumber {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -95px;
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
 
 #customize {
     font-size: 72px;
@@ -70,7 +110,7 @@ body {
 }
 */
 
-#startButton2 {
+#startButton {
     font-size: 18px;
     background-color: black;
     color: white;
@@ -88,14 +128,27 @@ body {
     border-color: black;
 }
 
+#startButton:hover {
+   cursor: pointer; 
+}
+
 #pillows {
     max-width: 100%;
     height: auto;
     margin-top: -60px;
 }
 
+.navigation_bar {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    background-color: white;
+    z-index: 1;
+}
 /* Page 1*/
-
 #sideBar2 {
     display: block;
     margin-left: 50px;
@@ -324,6 +377,10 @@ body {
     margin-right: auto;
     border-radius: 10px;
     border-style: hidden;
+}
+
+.material_buttons:hover {
+    cursor: pointer;
 }
 
 #duckDownButton { 

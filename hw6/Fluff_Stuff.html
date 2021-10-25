@@ -3,27 +3,36 @@
     <head>
         <meta charset="utf-8" />
         <title>Andrea Fluff Stuff</title>
-        <link href="Fluff Stuff.css" rel="stylesheet" type="text/css">
+        <link href="Fluff_Stuff.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="Fluff_Stuff.js" defer></script>
     </head>
 
-    <body>
+    <body onload="updateProductNumber()" onbeforeunload="clearLocalStorage()">
         <div> <!--Cover Page-->
             <img id="sideBar" src="Images/Side Bar Icon.png" alt="+">
-            <img id="cart" src="Images/Cart Icon.png" alt="Cart">
+            <a href="Shopping_Cart.html" target="_blank"><img id="cart" src="Images/Cart Icon.png" alt="Cart"></a>
             <img id="logoLarge" src="Images/Logo Large.png" alt="Fluff Stuff">
+            <button id="cartProductNumber" type="button">0</button>
             <h1 id="customize"> Customize Your Pillows</h1>
             <h2 id="specialize"> We specialize in throw pillows that are designed to turn any room cozy.</h2>
             <!--Neet to have onlick motion for the button in future-->
             <!--Working on jump/scroll effect-->
-            <!--<button id="startButton" type="button" onclick="start();">LET'S GET STARTED</button>-->
-            <a href="#section-1" id="startButton2">LET'S GET STARTED</a>
+            <!--<button id="startButton" type="button" onclick="location.href='#section-1'">LET'S GET STARTED</button>-->
+            <button id="startButton" type="button" onclick="window.location.href='#section-1'">LET'S GET STARTED</button>
+            <!--<a href="#section-1" id="startButton">LET'S GET STARTED</a>-->
             <img id="pillows" src="Images/Pillows.png" alt="A Row of Pillows">
         </div>
+
+        <div class="navigation_bar"> <!-- Navigation bar-->
+            <nav>
+                <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
+                <img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff">
+                <a href="#cover_section"><img class="back_icon"id="back_to_cover" src="Images/Back Icon.png" alt="go back"></a>
+                <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
+            </nav>
+        </div>
+
         <div class="section" id="section-1"> <!--Page 1-->
-            <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
-            <img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff">
-            <a href="#cover_section"><img class="back_icon"id="back_to_cover" src="Images/Back Icon.png" alt="go back"></a>
-            <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
             <img id="number1" src="Images/Number 1.png" alt="1">
             <p id="pillowType"> Choose a Type of Pillow</p>
             <div class="imgRow">
@@ -45,11 +54,8 @@
                 </div>
             </div>
         </div>
+
         <div class="section" id="section-2"> <!--Page 2-->
-            <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
-            <img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff">
-            <a href="#section-1"><img class="back_icon"id="back_to_section_1" src="Images/Back Icon.png" alt="go back"></a>
-            <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
             <img id="number2" src="Images/Number 2.png" alt="2">
             <p id="pillowColor"> Select a Pillow Color</p>
             <div class="imgRow">
@@ -71,35 +77,15 @@
                 </div>
             </div>
         </div>
+
         <div class="section" id="section-3"> <!--Page 3-->
-            <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
-            <img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff">
-            <a href="#section-2"><img class="back_icon"id="back_to_section_2" src="Images/Back Icon.png" alt="go back"></a>
-            <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
             <img id="number3" src="Images/Number 3.png" alt="3">
             <p id="pillowMaterial"> Select an Insert Material</p>
             <div>
-                <button class="material_buttons" id="duckDownButton" type="button" onclick="start();">Duck Down</button>
-                <button class="material_buttons" id="hypoallergenicButton" type="button" onclick="start();">Hypoallergenic Poly-blend</button>
-                <button class="material_buttons" id="memoryFoamButton" type="button" onclick="start();">Memory Foam</button>
+                <button class="material_buttons" id="duckDownButton" type="button" onclick="window.location.href='Product_Detail.html'">Duck Down</button>
+                <button class="material_buttons" id="hypoallergenicButton" type="button" onclick="window.location.href='Product_Detail.html'">Hypoallergenic Poly-blend</button>
+                <button class="material_buttons" id="memoryFoamButton" type="button" onclick="window.location.href='Product_Detail.html'">Memory Foam</button>
             </div>
         </div>
     </body>
 </html>
-
-
-<!--Citation Sources-->
-<!--img id="bedPillow" is created and owned by Urban Outfitters-->
-<!--img id="couchPillow" is created and owned by Urban Outfitters-->
-<!--img id="floorPillow" is created and owned by Urban Outfitters-->
-<!--img id="roundPillow" is created and owned by Urban Outfitters-->
-<!--img id="pillows" is created and owned by poshdiggs-->
-<!--back icon is created by Kiranshastry from https://www.flaticon.com/authors/kiranshastry-->
-<!--cart icon is created by Freepik from https://www.freepik.com-->
-<!--img id="MH" is created and owned by Urban Outfitters-->
-<!--img id="AFS" is created and owned by Urban Outfitters-->
-<!--img id="CD" is created and owned by Urban Outfitters-->
-<!--img id="RD" is created and owned by Urban Outfitters-->
-<!--img id="duckDownButton" is created and owned by Shutterstock-->
-<!--img id="hypoallergenicButton" is created and owned by HomeDepot-->
-<!--img id="memoryFoamButton" is created and owned by Target-->

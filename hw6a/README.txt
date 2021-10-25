@@ -1,1 +1,0 @@
-For this assignment’s bonus, I made 3 pages for product browsing purpose. Each of the page is linked to the one before and after with buttons and images. Users could interact with the pages.

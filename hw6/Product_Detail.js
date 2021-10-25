@@ -1,4 +1,7 @@
-// functions to increment/decrement product quantity
+////////////////////////
+// FUNCTION DEFINITIONS
+////////////////////////
+// functions for handling incrementing/decrementing product quantity
 function incrementQuantity() {
     var quantityElement = document.getElementById("number");
     var currentQuantity = parseInt(quantityElement.innerText);
@@ -9,20 +12,20 @@ function incrementQuantity() {
 function decrementQuantity() {
     const quantityElement = document.getElementById("number");
     var currentQuantity = parseInt(quantityElement.innerText);
-    if(currentQuantity !=0) {
+    if(currentQuantity != 0) {
         var newQuantity = currentQuantity - 1;
         quantityElement.innerText = newQuantity.toString();
-    }
+    }  
 }
 
-//functions to add/change/remove borders
-function addBorder(element) {
-    var borderStyle = "solid #535353 thin";
+
+// function for adding/changing/removing borders
+function addBorder(element, borderStyle) {
     element.style.border = borderStyle;
 }
 
-function removeBorder(element) {
-    element.style.border = "none";
+function hideBorder(element) {
+    element.style.border = "hidden";
 }
 
 function changeGreyBorder(element) {
@@ -30,15 +33,15 @@ function changeGreyBorder(element) {
     element.style.border = borderStyle;
 }
 
-function removeNoneTargetBorder(targetElement, elements) {
+function hideNoneTargetBorder(targetElement, elements) {
     for(var i = 0; i < elements.length; i++) {
         if (elements[i].id != targetElement.id) {
-            removeBorder(elements[i]);
+            hideBorder(elements[i]);
         }
     }
 }
 
-function changeNoneTargetBorder(targetElement, elements) {
+function changeNoneTargetGreyBorder(targetElement, elements) {
     for(var i = 0; i < elements.length; i++) {
         if (elements[i].id != targetElement.id) {
             changeGreyBorder(elements[i]);
@@ -46,16 +49,16 @@ function changeNoneTargetBorder(targetElement, elements) {
     }
 }
 
-// functions to change overall large image with mouse over
+// functions for handling changing overall large image with user mouse over
 function changeLargeImg(event) {
     var currentElement = event.currentTarget;
-    addBorder(currentElement, "thin");
-    removeNoneTargetBorder(currentElement, smallImageElements);
+    addBorder(currentElement, "solid thin rgb(83, 83, 83)");
+    hideNoneTargetBorder(currentElement, smallImageElements);
     var currentImgSrc = currentElement.src;
     document.getElementById("overallLarge").src = currentImgSrc;
 }
 
-// functions to change product color
+// function for handling changing product color
 function changeColorTitle(currentElement) {
     var colorTitle = document.getElementById("colorTitle");
     var currentColor;
@@ -80,12 +83,35 @@ function changeColorTitle(currentElement) {
 
 function changeColor(event) {
     var currentElement = event.currentTarget;
-    addBorder(currentElement, "thin");
-    removeNoneTargetBorder(currentElement, colorElements); 
+    addBorder(currentElement, "solid thin rgb(83, 83, 83)");
+    hideNoneTargetBorder(currentElement, colorElements); 
     changeColorTitle(currentElement);     
 }
 
-// functions to change product material
+/*
+function showGreyBorder(event) {
+    var currentElement = event.currentTarget;
+    if(currentElement.style.borderColor != "rgb(83, 83, 83)"){
+        console.log(currentElement.style.border);
+        addBorder(currentElement, "solid thin rgb(196, 196, 196)");
+    }
+    else{
+        console.log("this is 838383");
+    }
+}
+
+function hideGreyBorder(event) {
+    var currentElement = event.currentTarget;
+    if(currentElement.style.borderColor != "rgb(83, 83, 83)"){
+        console.log(currentElement.style.border);
+        hideBorder(currentElement);
+    }
+    else{
+        console.log("this is 838383");
+    } 
+}*/
+
+// function for handling changing product material
 function changeMaterialTitle(currentElement) {
     var materialTitle = document.getElementById("materialTitle");
     var currentMaterial;
@@ -107,14 +133,37 @@ function changeMaterialTitle(currentElement) {
 
 function changeMaterial(event) {
     var currentElement = event.currentTarget;
-    addBorder(currentElement, "thin");
-    changeNoneTargetBorder(currentElement, materialButtons);
+    addBorder(currentElement, "solid thin rgb(83, 83, 83)");
+    changeNoneTargetGreyBorder(currentElement, materialButtons);
     changeMaterialTitle(currentElement);
 }
 
-// functions to add product to cart
+// function for handling adding product to cart
 function addToCart(event) {
+    var currentElement = event.currentTarget;
+    var numberOfNewProducts = parseInt(document.getElementById("number").innerText);
+    var cartNotificationElement = document.getElementById("cartProductNumber");
+    var numberOfCurrentProducts = parseInt(cartNotificationElement.innerText);
+    var numberOfTotalProducts = numberOfCurrentProducts + numberOfNewProducts;
+    cartNotificationElement.style.display = "block";
+    cartNotificationElement.innerText = numberOfTotalProducts.toString();
+    localStorage.setItem('numberOfItems', numberOfTotalProducts.toString());
 }
+
+// function for updating product number notification
+function updateProductNumber() {
+    var cartProductNumber = document.getElementById("cartProductNumber");
+    cartProductNumber.innerText = localStorage.getItem('numberOfItems');
+    console.log(localStorage.getItem('numberOfItems'));
+}
+
+function clearLocalStorage() {
+    localStorage.setItem('numberOfItems', '0');
+}
+
+////////
+// MAIN
+////////
 
 // Add event listener on incrementing and drecrementing product quantity
 var incrementButton = document.getElementById("plus");
@@ -133,6 +182,8 @@ for (var i = 0; i < smallImageElements.length; i++) {
 var colorElements = document.getElementsByClassName("colorSquare");
 for (var i = 0; i < colorElements.length; i++) {
     colorElements[i].addEventListener("click", changeColor);
+    //colorElements[i].addEventListener("mouseover", showGreyBorder);
+    //colorElements[i].addEventListener("mouseout", hideGreyBorder);
 }
 
 // Add event listener on choosing material
@@ -144,3 +195,4 @@ for (var i = 0; i < materialButtons.length; i++) {
 // Add event listener on adding to cart
 var addToCardButton = document.getElementById("addToCart");
 addToCardButton.addEventListener("click", addToCart);
+

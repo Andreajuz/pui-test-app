@@ -27,13 +27,32 @@
     float:right;
 }
 
+#cartProductNumber {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -40px;
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-align: center;
+}
+
 /* Table */
 
-.cart-page {
+.containerCartPage {
     margin: 80px auto;
 }
 
-table {
+#table1 {
     width: 92%;
     border-collapse: collapse;
     border-bottom: 1px solid #C4C4C4;
@@ -41,7 +60,7 @@ table {
     margin-right: 50px;
 }
 
-.item-info {
+.itemInfo {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0px;
@@ -56,11 +75,11 @@ th {
     padding: 30px 0px;
     border-bottom: 1px solid #C4C4C4;
     font-weight: normal;
-};
+}
 
 td a {
     color: #8D8D8D;
-    font-size: 12px;
+    font-size: smaller;
 }
 
 td img {
@@ -80,4 +99,47 @@ td input {
     width: 30px;
     height: 20px;
     padding: 2pxs;
+}
+
+#cross {
+    width: 20px;
+}
+
+.totalPrice {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#table2 {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 50px;
+    margin-top: -30px;
+}
+
+#table2 td {
+    padding-bottom: 20px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+#checkout {
+    width: 300px;
+    height: 60px;
+    background-color: #535353;
+    border-style: none;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-right: 50px;
+    margin-top: +20px;
 }

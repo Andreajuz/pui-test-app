@@ -27,6 +27,25 @@
     float:right;
 }
 
+#cartProductNumber {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -40px;
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-align: center;
+}
+
 /* grid */
 
 /*
@@ -117,6 +136,7 @@
     margin-top: -10px;
 }
 
+/* Color */
 #colorTitle {
     display: block;
     font-size: 16px;
@@ -135,12 +155,13 @@
 
 #morningHaze {
     border-style: solid;
-    border-color: #535353;
+    /*border-color: #535353;*/
+    border-color: rgb(83, 83, 83);
     border-width: thin;
+
 }
 
 /* material*/
-
 #materialTitle {
     display: block;
     font-size: 16px;
@@ -171,7 +192,6 @@
 }
 
 /* Product Quantity*/
-
 #quantityTitle {
     display: block;
     font-size: 16px;
@@ -208,7 +228,6 @@
 }
 
 /* Add to Cart*/
-
 #addToCart {
     width: 300px;
     height: 60px;
@@ -219,4 +238,10 @@
     font-weight: lighter;
     text-align: center;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+#addToCart:hover{
+    background-color: #8d8d8d;
 }
