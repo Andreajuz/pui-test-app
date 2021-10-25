@@ -1,0 +1,341 @@
+/* Cover Page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.section {
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#sideBar {
+    margin-left: 50px;
+}
+
+#cart {
+    margin-right: 50px;
+    margin-left: auto;
+    float:right
+}
+
+#logoLarge {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +10px;
+}
+
+#customize {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+    margin-top: +80px;
+}
+
+#specialize {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-top: -30px;
+}
+
+/*
+#startButton {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 60px; 
+    border-style: solid;
+    border-color: black;
+}
+*/
+
+#startButton2 {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 20px; 
+    border-style: solid;
+    border-color: black;
+}
+
+#pillows {
+    max-width: 100%;
+    height: auto;
+    margin-top: -60px;
+}
+
+/* Page 1*/
+
+#sideBar2 {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#logoSmall {
+    display: block;
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+.back_icon {
+    display: block;
+    margin-right: 170px;
+    margin-left: auto;
+    margin-top: -33px;
+    float: right;
+}
+
+#cart2 {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -32px;
+    float:right;
+}
+
+#number1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowType {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h3 {
+    text-align: center;
+}
+
+.imgRow {
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
+}
+
+#couchPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#couchPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#bedPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#bedPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#roundPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#roundPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#floorPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#floorPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 2*/
+
+#number2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowColor {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h4 {
+    text-align: center;
+}
+
+.imgRow {
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
+}
+
+#morningHaze {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#morningHazeText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#afterSchoolSpecial {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#afterSchoolSpecialText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#cozyDenim {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#cozyDenimText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#rainyDay {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#rainyDayText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 3*/
+
+#number3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowMaterial {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.material_buttons {
+    display: block;
+    width: 400px;
+    height: 70px;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.65;
+    color: black;
+    font-family: Helvetica;
+    letter-spacing: 0.2px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+#duckDownButton { 
+    background-image: url("Images/Duck\ Down.jpeg");
+}
+
+#hypoallergenicButton {
+    background-image: url("Images/Hypoallergenic.jpeg");
+    margin-top: +25px;
+}
+
+#memoryFoamButton {
+    background-image: url("Images/Memory\ Foam.jpeg");
+    margin-top: +25px;
+}
