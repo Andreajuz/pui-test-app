@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Andrea Shopping Cart</title>
+        <link href="Shopping_Cart.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="Shopping_Cart.js" defer></script>
+    </head>
+    <body>
+        <div class="actualSideBar" id="shoppingCartSideBar">
+            <img id="sideBarCross" src="Images/sideBarCross.jpg" alt="delete">
+            <a href="#" class="sideBarLinks">Home</a>
+            <a href="#" class="sideBarLinks">About</a>
+            <a href="#" class="sideBarLinks">FAQ</a>
+            <a href="#" class="sideBarLinks">Contact</a>
+        </div>
+        <div id="mainParts">
+            <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
+            <a href="Fluff_Stuff.html"><img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff"></a>
+            <a href="Product_Detail.html"><img id="back" src="Images/Back Icon.png" alt="Back"></a>
+            <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
+            <button id="cartProductNumber" type="button">0</button>
+            <!--table-->
+            <div class="containerCartPage">
+                <table id="table1">
+                    <tr>
+                        <th>Shopping Cart</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <!-- <tr id="Morning Haze_Duck Down" class="product_row">
+                        <td>
+                            <div class="itemInfo">
+                                <img src="Images/MH.jpeg" alt="Morning Haze">
+                                <div>
+                                    <p><b>Artisan Round Pillow</b></p>
+                                    <small><b>Color</b> Morning Haze</small>
+                                    <br>
+                                    <small><b>Material</b> Duck Down</small>
+                                    <br>
+                                    <small><b>Size</b> One Size</small>
+                                    <br>
+                                    <a href="">Edit</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Price <b id="Morning Haze_Duck Down__singlePrice">$69.00</b></td>
+                        <td>Quantity <input id="Morning Haze_Duck Down__quantity" class="quantity" type="number" value="0" min="0"></td>
+                        <td>Subtotal <b id="Morning Haze_Duck Down__subTotal">$69.00</b></td>
+                        <td><img id="Morning Haze_Duck Down__cross" class="cross" src="Images/cross.png" alt="delete"></td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class="totalPrice">
+                <table id="table2">
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free Shipping</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><b id="total">$0.00</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="add">
+                <button id="checkout" type="button">Proceed to Checkout</button>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+
+<!--Citation Sources-->
+<!--img id="MH" is created and owned by Urban Outfitters-->
+<!--back icon is created by Kiranshastry from https://www.flaticon.com/authors/kiranshastry-->
+<!--cart icon is created by Freepik from https://www.freepik.com-->

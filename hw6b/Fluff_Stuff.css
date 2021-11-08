@@ -1,0 +1,430 @@
+/* Cover Page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.actualSideBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    padding-top: 50px;
+    z-index: 2;
+    background-color: #535353;
+}
+
+.sideBarLinks {
+    display: none;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: 200;
+    color: white;
+    padding-top: 0px;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+
+#sideBarCross {
+    display: block;
+    position: absolute;
+    width: 0px;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.section {
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 70px;
+}
+
+/*#sideBar {
+    margin-left: 50px;
+}*/
+
+#sideBar {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+    max-width: 30px;
+    cursor: pointer;
+}
+
+
+#logoLarge {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +10px;
+}
+
+
+#cart {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -20px;
+    float:right;
+}
+
+/*#cart {
+    margin-right: 50px;
+    margin-left: auto;
+    float:right
+}*/
+
+#cartProductNumber {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -95px;
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+#customize {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+    margin-top: +80px;
+}
+
+#specialize {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-top: -30px;
+}
+
+/*
+#startButton {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 60px; 
+    border-style: solid;
+    border-color: black;
+}
+*/
+
+#startButton {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +60px;
+    border-radius: 10px;
+    padding: 20px 20px; 
+    border-style: solid;
+    border-color: black;
+}
+
+#startButton:hover {
+   cursor: pointer; 
+}
+
+#pillows {
+    max-width: 100%;
+    height: auto;
+    margin-top: -60px;
+}
+
+.navigation_bar {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    background-color: white;
+    z-index: 1;
+}
+/* Page 1*/
+#sideBar2 {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#logoSmall {
+    display: block;
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+.back_icon {
+    display: block;
+    margin-right: 170px;
+    margin-left: auto;
+    margin-top: -33px;
+    float: right;
+}
+
+#cart2 {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -32px;
+    float:right;
+}
+
+#number1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowType {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h3 {
+    text-align: center;
+}
+
+.imgRow {
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
+}
+
+#couchPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#couchPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#bedPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#bedPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#roundPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#roundPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#floorPillow {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#floorPillowText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 2*/
+
+#number2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowColor {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.imgColumn {
+    flex: 25%;
+    display: inline-block;
+    width: 260px;
+    margin: 0 30px;
+}
+
+.imgColumn h4 {
+    text-align: center;
+}
+
+.imgRow {
+    /*display: flex;*/
+    text-align: center;
+    position: relative;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+    overflow: scroll;
+}
+
+#morningHaze {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#morningHazeText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#afterSchoolSpecial {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#afterSchoolSpecialText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#cozyDenim {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#cozyDenimText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+#rainyDay {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+#rainyDayText {
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+/* Page 3*/
+
+#number3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: +50px;
+    margin-bottom: -20px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+#pillowMaterial {
+    font-size: 72px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #535353;
+    text-align: center;
+}
+
+.material_buttons {
+    display: block;
+    width: 400px;
+    height: 70px;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.65;
+    color: black;
+    font-family: Helvetica;
+    letter-spacing: 0.2px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+.material_buttons:hover {
+    cursor: pointer;
+}
+
+#duckDownButton { 
+    background-image: url("Images/Duck\ Down.jpeg");
+}
+
+#hypoallergenicButton {
+    background-image: url("Images/Hypoallergenic.jpeg");
+    margin-top: +25px;
+}
+
+#memoryFoamButton {
+    background-image: url("Images/Memory\ Foam.jpeg");
+    margin-top: +25px;

@@ -1,0 +1,1 @@
+For this assignment’s bonus, I added a sidebar as an additional JS function

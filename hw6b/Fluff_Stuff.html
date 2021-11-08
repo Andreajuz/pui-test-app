@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Andrea Fluff Stuff</title>
+        <link href="Fluff_Stuff.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="Fluff_Stuff.js" defer></script>
+    </head>
+
+    <body>
+        <div class="actualSideBar" id = "fluffStuffSideBar">
+            <img id="sideBarCross" src="Images/sideBarCross.jpg" alt="delete">
+            <a href="#" class="sideBarLinks">Home</a>
+            <a href="#" class="sideBarLinks">About</a>
+            <a href="#" class="sideBarLinks">FAQ</a>
+            <a href="#" class="sideBarLinks">Contact</a>
+        </div>
+        <div id="mainParts">
+            <div> <!--Cover Page-->
+                <img id="sideBar" src="Images/Side Bar Icon.png" alt="+">
+                <a href="Shopping_Cart.html" target="_blank"><img id="cart" src="Images/Cart Icon.png" alt="Cart"></a>
+                <img id="logoLarge" src="Images/Logo Large.png" alt="Fluff Stuff">
+                <button id="cartProductNumber" type="button">0</button>
+                <h1 id="customize"> Customize Your Pillows</h1>
+                <h2 id="specialize"> We specialize in throw pillows that are designed to turn any room cozy.</h2>
+                <!--Neet to have onlick motion for the button in future-->
+                <!--Working on jump/scroll effect-->
+                <!--<button id="startButton" type="button" onclick="location.href='#section-1'">LET'S GET STARTED</button>-->
+                <button id="startButton" type="button" onclick="window.location.href='#section-1'">LET'S GET STARTED</button>
+                <!--<a href="#section-1" id="startButton">LET'S GET STARTED</a>-->
+                <img id="pillows" src="Images/Pillows.png" alt="A Row of Pillows">
+            </div>
+    
+            <div class="navigation_bar"> <!-- Navigation bar-->
+                <nav>
+                    <img id="sideBar2" src="Images/Side Bar Icon 2.png" alt="+">
+                    <img id="logoSmall" src="Images/Logo Small.png" alt="Fluff Stuff">
+                    <a href="#cover_section"><img class="back_icon"id="back_to_cover" src="Images/Back Icon.png" alt="go back"></a>
+                    <img id="cart2" src="Images/Cart Icon 2.png" alt="Cart">
+                </nav>
+            </div>
+    
+            <div class="section" id="section-1"> <!--Page 1-->
+                <img id="number1" src="Images/Number 1.png" alt="1">
+                <p id="pillowType"> Choose a Type of Pillow</p>
+                <div class="imgRow">
+                    <div class="imgColumn">
+                        <a href="#section-2"><img id="couchPillow" src="Images/Couch Pillow.jpeg" alt="Couch Pillow"></a>
+                        <h3 id="couchPillowText"> Couch Pillow</h3>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-2"><img id="bedPillow" src="Images/Bed Pillow.jpeg" alt="Bed Pillow"></a>
+                        <h3 id="bedPillowText"> Bed Pillow</h3>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-2"><img id="roundPillow" src="Images/Round Pillow.jpeg" alt="Round Pillow"></a>
+                        <h3 id="roundPillowText"> Round Pillow</h3>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-2"><img id="floorPillow" src="Images/Floor Pillow.jpeg" alt="Floor Pillow"></a>
+                        <h3 id="floorPillowText"> Floor Pillow</h3>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="section" id="section-2"> <!--Page 2-->
+                <img id="number2" src="Images/Number 2.png" alt="2">
+                <p id="pillowColor"> Select a Pillow Color</p>
+                <div class="imgRow">
+                    <div class="imgColumn">
+                        <a href="#section-3"><img id="morningHaze" src="Images/MH.jpeg" alt="Coral Pink"></a>
+                        <h4 id="morningHazeText"> Morning Haze</h4>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-3"><img id="afterSchoolSpecial" src="Images/AFS.jpeg" alt="Bright Orange"></a>
+                        <h4 id="afterSchoolSpecialText"> After School Special</h4>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-3"><img id="cozyDenim" src="Images/CD.jpeg" alt="Denim Blue"></a>
+                        <h4 id="cozyDenimText"> Cozy Denim</h4>
+                    </div>
+                    <div class="imgColumn">
+                        <a href="#section-3"><img id="rainyDay" src="Images/RD.jpeg" alt="Aqua Blue"></a>
+                        <h4 id="rainyDayText"> Rainy Day</h4>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="section" id="section-3"> <!--Page 3-->
+                <img id="number3" src="Images/Number 3.png" alt="3">
+                <p id="pillowMaterial"> Select an Insert Material</p>
+                <div>
+                    <button class="material_buttons" id="duckDownButton" type="button" onclick="window.open('Product_Detail.html', '_blank')">Duck Down</button>
+                    <button class="material_buttons" id="hypoallergenicButton" type="button" onclick="window.open('Product_Detail.html', '_blank')">Hypoallergenic Poly-blend</button>
+                    <button class="material_buttons" id="memoryFoamButton" type="button" onclick="window.open('Product_Detail.html', '_blank')">Memory Foam</button>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

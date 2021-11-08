@@ -1,0 +1,279 @@
+/* top */
+.actualSideBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    padding-top: 50px;
+    z-index: 2;
+    background-color: #535353;
+}
+
+.sideBarLinks {
+    display: none;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: 200;
+    color: white;
+    padding-top: 0px;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+#sideBarCross {
+    display: block;
+    position: absolute;
+    width: 0px;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+#sideBar2 {
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#logoSmall {
+    display: block;
+    margin-left: 100px;
+    margin-top: -25px;
+}
+
+#back {
+    display: block;
+    margin-left: auto;
+    margin-right: 180px;
+    margin-top: -32px;
+}
+
+#cart2 {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: -20px;
+    float:right;
+}
+
+#cartProductNumber {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -40px;
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* grid */
+
+/*
+.grid > div{
+    background-color: lightgrey;
+    padding: 1em;
+}
+
+.grid > div:nth-child(odd) {
+    background-color: grey;
+}
+*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 12.5% 40% 48%;
+    /*
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    */
+    grid-gap: 1em;
+}
+
+/* Columns */
+
+.leftColumn {
+    display: grid;
+    grid-template-rows: repeat(3, 135px);
+    margin-left: 50px;
+    margin-top: 70px;
+    position: relative;
+}
+
+/*
+.leftColumn > div{
+    border: #000000 1px, solid;
+}
+*/
+
+.middleColumn {
+    /*margin-left: 30px;*/
+    margin-top: 70px;
+    position: relative;
+}
+
+.rightColumn {
+    /*margin-left: 80px;*/
+    display: grid;
+    grid-template-rows: 10% 10% 20% 20% 20% 10%;
+    margin-top: 70px;
+    position: relative;
+}
+
+/* Details */
+
+#overall {
+    max-width: 80px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+}
+
+#zoomin {
+    max-width: 80px;
+}
+
+#stack {
+    max-width: 80px;
+}
+
+#overallLarge {
+    max-width: 380px;
+}
+
+#artisanRoundPillow {
+    font-size: 32px;
+    font-family: Georgia;
+    font-weight: lighter;
+    color: #535353;
+    margin-top: -0px;
+}
+
+.pricing {
+    font-size: 36px;
+    font-family: Georgia;
+    font-weight: lighter;
+    color: #535353;
+    margin-top: -10px;
+}
+
+/* Color */
+#colorTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    margin-bottom: 10px;
+}
+
+.colorSquare {
+    max-width: 60px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#morningHaze {
+    border-style: solid;
+    /*border-color: #535353;*/
+    border-color: rgb(83, 83, 83);
+    border-width: thin;
+
+}
+
+/* material*/
+#materialTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353;
+    margin-bottom: 10px
+}
+
+.materialButton {
+    padding: 20px 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgray;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: helvetica;
+    font-weight: lighter;
+    color: #535353;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#duckDown {
+    border-color: #535353;
+    margin-left: 0px;
+}
+
+/* Product Quantity*/
+#quantityTitle {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: #535353; 
+    margin-bottom: 10px
+}
+
+.addMinusButton {
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: lightgray;
+    background-color: lightgrey;
+    font-size: 14px;
+    color: #535353;
+    text-align: center;
+    cursor: pointer;
+}
+
+#number {
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: #535353;
+    border-width: thin;
+    background-color:white;
+    font-size: 14px;
+    color: #535353;
+    text-align: center;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+/* Add to Cart*/
+#addToCart {
+    width: 300px;
+    height: 60px;
+    background-color: #535353;
+    border-style: none;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+#addToCart:hover{
+    background-color: #8d8d8d;
+}
