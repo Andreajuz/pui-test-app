@@ -1,0 +1,11 @@
+.bubbles {
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+#nyc-map {
+    position: relative;
+}

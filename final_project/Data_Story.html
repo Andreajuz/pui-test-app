@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <title>Andrea Data Story</title>
-        <link href="Data_ Story.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="Fluff_Stuff.js" defer></script>
+        <link href="Data_ Story_new.css" rel="stylesheet" type="text/css">
+        <script src="d3.js"></script>
     </head>
 
-    <body>
+    <body onload=' location.href="#firstPage" '>
         <div id="sections">
-            <!--First Page-->
-            <img id="logo" src="Images/logo.png" alt="real estate logo">
-            <section class="step">
+            <!--First Page-->         
+            <section class="step" id="firstPage">
+                <img id="logo" src="Images/logo.png" alt="real estate logo">
                 <div class="title">
                     <h1>NYC Rental Market</h1>
                     <h2>POST-PANDAMIC DATA</h2>
@@ -22,44 +22,44 @@
                         <p>The era of Covid concessions for apartment hunters is over.</p>
                     </div>
                 </div>
-                <i class="arrow down"></i>
+                <a href="#secondPage" onkeydown="handleKeyDown()"><i class="arrow down" id="firstPageArrowDown"></i></a>
             </section>
             <!--Second Page-->
-            <section class="step">
-                <i class="arrow up"></i>
+            <section class="step" id="secondPage">
+                <a href="#firstPage"><i class="arrow up" id="secondPageArrowUp"></i></a>
                 <div class="largeP">
                     <p>In October 2021, rental price reached the highest point in the past <mark class="yellow">27</mark> months.</p>
                 </div>
                 <div class="smallP">
                     <p>For a studio apartment, the average rent has hit a record high of $2,530.</p>
                 </div>
-                <i class="arrow down"></i>
+                <a href="#thirdPage"><i class="arrow down" id="secondPageArrowDown"></i></a>
             </section>
             <!--Third Page-->
-            <section class="step">
-                <i class="arrow up"></i>
+            <section class="step" id="thirdPage">
+                <a href="#secondPage"><i class="arrow up" id="thirdPageArrowUp"></i></a>
                 <div class="largeP">
                     <p><mark class="yellow">Midtown West</mark> experienced the highest increase rate of 21%, followed by Soho with 20%.</p>
                 </div>
                 <div class="smallP">
                     <p>The average rent increase in NYC is 13% comparing to last year.</p>
                 </div>
-                <i class="arrow down"></i>
+                <a href="#fourthPage"><i class="arrow down" id="thirdPageArrowDown"></i></a>
             </section>
             <!--Fourth Page-->
-            <section class="step">
-                <i class="arrow up"></i>
+            <section class="step" id="fourthPage">
+                <a href="#thirdPage"><i class="arrow up" id="fourthPageArrowUp"></i></a>
                 <div class="largeP">
                     <p>People appear to be <mark class="yellow">flooding back</mark>: companies and universities are demanding people to return.</p>
                 </div>
                 <div class="smallP">
                     <p>The quick rise can be attributed in part to this summer’s massive spike in demand.</p>
                 </div>
-                <i class="arrow down"></i>
+                <a href="#fifthPage"><i class="arrow down" id="fourthPageArrowDown"></i></a>
             </section>
             <!--Fifth Page-->
-            <section class="step">
-                <i class="arrow up"></i>
+            <section class="step" id="fifthPage">
+                <a href="#fourthPage"><i class="arrow up" id="fifthPageArrowUp"></i></a>
                 <div class="largeP">
                     <p>The question is: how <mark class="yellow">far</mark> will market go?</p>
                 </div>
@@ -71,5 +71,7 @@
         <div>
             <div id="visual"></div>
         </div>
+    <div id="currentPage">1</div>
+    <script type = "text/javascript" src="Animations.js"></script>
     </body>
 </html>

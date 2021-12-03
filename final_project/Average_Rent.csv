@@ -1,0 +1,13 @@
+District,Ave Price,X,Y,R,RGB
+Upper West Side,2353,417,138,60,"rgb(245,170,164)"
+Upper East Side,2231,505,239,45,"rgb(245,170,164)"
+Midtown West,2712,419,278,24,"rgb(239,123,115)"
+Midtown East,2530,485,329,20,"rgb(239,123,115)"
+Chelsea,3021,383,333,28,"rgb(215,21,4)"
+Greenwich Viaage,2988,365,396,24,"rgb(215,21,4)"
+Soho,3109,383,464,17,"rgb(215,21,4)"
+East Village,2250,450,420,18,"rgb(245,170,164)"
+Lower East Side,2207,448,476,20,"rgb(245,170,164)"
+Financial District,2566,347,516,21,"rgb(239,123,115)"
+Long Island City,2103,539,349,30,"rgb(246,214,212)"
+Downtown Brooklyn,2085,411,561,30,"rgb(246,214,212)"
