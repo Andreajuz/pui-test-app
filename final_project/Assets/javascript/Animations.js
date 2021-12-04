@@ -1,8 +1,7 @@
-//d3.selectAll("h3").transition().style("font-size","28px").delay(2000).duration(2000);
-
 ////////
 // DATA
 ////////
+// data for chart 1
 const graphOneData = [
     {region: "Upper West Side", price: 2353, x: 417, y: 138, r: 60, rgb: "rgb(245,170,164)", index:1},
     {region: "Upper East Side", price: 2231, x: 505, y: 239, r: 45, rgb: "rgb(245,170,164)", index:2},
@@ -18,20 +17,22 @@ const graphOneData = [
     {region: "Downtown Brooklyn", price: 2085, x: 411, y: 561, r: 30, rgb: "rgb(246,214,212)", index:12}
 ];
 
+// data for chart 2
 const graphTwoData = [9, 10, 12, 13, 13, 14, 15, 17, 18, 20, 19, 17, 18, 
                     20, 21, 23, 26, 28, 31, 33, 31, 28, 26, 22, 17, 12, 5];
 
+// data for chart 3
 const graphThreeData = [
     {region: "Upper West Side", oldPrice: 1936, newPrice: 2353, index:1},
     {region: "Upper East Side", oldPrice: 1899, newPrice: 2231, index:2},
-    {region: "Midtown West", oldPrice: 2234, newPrice: 2712, index:3},
+    {region: "Midtown West", oldPrice: 2034, newPrice: 2712, index:3},
     {region: "Midtown East", oldPrice: 2177, newPrice: 2530, index:4},
     {region: "Chelsea", oldPrice: 2650, newPrice: 3021, index:5},
     {region: "Greenwich Viaage", oldPrice: 2604, newPrice: 2988, index:6},
-    {region: "Soho", oldPrice: 2688, newPrice: 3109, index:7},
+    {region: "Soho", oldPrice: 2618, newPrice: 3109, index:7},
     {region: "East Village", oldPrice: 1893, newPrice: 2250, index:8},
     {region: "Lower East Side", oldPrice: 1884, newPrice: 2207, index:9},
-    {region: "Financial District", oldPrice: 2043, newPrice: 2566, index:10},
+    {region: "Financial District", oldPrice: 2143, newPrice: 2566, index:10},
     {region: "Long Island City", oldPrice: 1884, newPrice: 2103, index:11},
     {region: "Downtown Brooklyn", oldPrice: 1790, newPrice: 2085, index:12}
 ]
@@ -39,6 +40,7 @@ const graphThreeData = [
 /////////////////////////////////////
 // Functions for drawing first graph
 /////////////////////////////////////
+// function that handles mouse off circle event
 function onCircleEffect(d, i) {
     var circle = d3.select(this);
     circle
@@ -49,46 +51,91 @@ function onCircleEffect(d, i) {
         .attr("stroke", "black")
         .attr("stroke-width", 2);
 
-    svg.append("text")
-        .attr("id", "circle" + i.index)
-        .attr("x", (parseInt(circle.attr("cx")) + parseInt(circle.attr("r")) + 10).toString())
-        .attr("y", (parseInt(circle.attr("cy")) + 4).toString())
-        .attr("font-family", "Helvetica")
-        .attr("font-size", "0px")
-        .text([i.region, " $"+i.price]);
+    // add rect as text background
+    var textX = (parseInt(circle.attr("cx")) + parseInt(circle.attr("r")) + 10).toString();
+    var textY = (parseInt(circle.attr("cy")) + 4).toString();
+    svg.append("rect")
+        .attr("id", "background" + i.index)
+        .attr("x", textX)
+        .attr("y", (parseInt(textY) - 18).toString() )
+        .attr("rx", 10)
+        .attr("ry", 10)
+        .attr("width", 0)
+        .attr("height", 0)
+        .attr("fill", "black")
+        .attr("opacity", 0.6)
 
+    // add text as caption displaying the district and price
+    var text = svg.append("text")
+        .attr("id", "circle" + i.index)
+        .attr("x", (parseInt(textX) + 10).toString())
+        .attr("y", textY)
+        .attr("stroke", "none")
+        .attr("fill", "white")
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "14px")
+        .text([i.region, " $"+i.price]);
+    
+    // get the size of the text box
+    var textBox = text.node().getBBox();
+    var textWidth = textBox.width;
+    var textHeight = textBox.height;
+    text.attr("font-size", "0px");   
+
+    // add animation for text background
+    d3.select("#background" + i.index)
+        .transition()
+        .duration(300)
+        .attr("width", textWidth + 20)
+        .attr("height", textHeight + 10)
+
+    // add animation for text
     d3.select("#circle" + i.index)
         .transition()
         .duration(300)
-        .attr("font-size", "14px");
-        
+        .attr("font-size", "14px");      
 }
 
+// function that handles mouse over circle event
 function offCircleEffect(d, i) {
     var circle = d3.select(this);
     var text = d3.select("#circle" + i.index);
+    var background = d3.select("#background" + i.index)
+    // change circle size back
     circle
         .transition()
-        .duration(500)
+        .duration(300)
         .attr("stroke", "none")
         .attr("r", function(d, i) {return d.r;});
+    // change text size to 0
     text
         .transition()
         .duration(300)
         .attr("font-size", "0px");
+    
+    // change background box size to 0
+    background
+        .transition()
+        .duration(300)
+        .attr("width", 0)
+        .attr("height", 0)
+    // clear text and background
     setTimeout(() => { text.remove();}, 300);
+    setTimeout(() => { background.remove();}, 300);
     
 }
 
+// function for drawing first chart
 function drawFirstGraph() {
     // get svg
     var svg = d3.select("#visual").select("svg");
 
+    // add nyc map to svg
     svg.append('svg:image')
         .attr("id", "nyc-map")
         .attr("width", width)
         .attr("opacity", 0)
-        .attr('xlink:href', "images/nyc.png")
+        .attr('xlink:href', "Assets/Images/nyc.png")
         .attr("alt", 
             "This is a picture of new york city map with 12 bubbles representing price increase in districts");
     d3.select("#nyc-map")
@@ -122,13 +169,14 @@ function drawFirstGraph() {
         .attr("opacity", 1)
         .attr("r", function(d, i) {return d.r;})
     
-    // add event listener
+    // add event listener for circles
     svg.selectAll("circle")
         .on("mouseover", onCircleEffect)
         .on("mouseout", offCircleEffect);
 
 }
 
+// function for removing first chart
 function removeFirstGraph() {
     var image = svg.select("image");
     var circles = svg.selectAll("circle");
@@ -218,6 +266,7 @@ function onBarEffect(d, i) {
     var bar = d3.select(this);
     var percentage = ((i.newPrice - i.oldPrice)/(parseFloat(i.newPrice))*100).toFixed(2).toString() + "%";
 
+    // add text displaying increase percentage
     svg.append("text")
         .attr("id", "percentageText" + i.index)
         .attr("x", parseInt(bar.attr("rightEndX")) + 10)
@@ -226,9 +275,10 @@ function onBarEffect(d, i) {
         .attr("font-size", "0px")
         .text(percentage);
 
+    // text animation
     d3.select("#percentageText" + i.index)
         .transition()
-        .duration(300)
+        .duration(150)
         .attr("font-size", "18px")
         .attr("font-weight", "bold")
         .attr("letter-spacing", "2");
@@ -278,15 +328,20 @@ function drawThirdGraph() {
         .attr("id", function(d,i) {return "leftBar" + (i+1);})
         .attr("width", 0)
         .attr("height", barHeight)
-        .attr("fill", leftBarColor);
+        .attr("fill", leftBarColor)
+        .attr("rightEndX", function(d, i){return chartLeftOffset + d.newPrice/scaleDown;})
+        .attr("rightEndY", function(d, i){
+            return parseInt(barHeight*i)+spaceBetweenBars*i + chartUpOffset;
+        });
 
+    // animation of displaying left bars
     svg.selectAll(".leftBars")
         .transition()
         //.delay(500)
         .duration(1500)
         .attr("width", function(d, i) {return d.oldPrice/scaleDown;});
 
-    // add texts
+    // add labels of district names
     g.append("text")
         .attr("id", function(d, i) {return "text" + (i+1)})
         .classed("labelText", true)
@@ -331,10 +386,15 @@ function drawThirdGraph() {
             .attr("width", function(d, i) {return (d.newPrice - d.oldPrice)/scaleDown;});
     }, 3500);
     
-    // add percentage text
-    svg.selectAll(".rightBars")
-        .on("mouseover", onBarEffect)
-        .on("mouseout", offBarEffect);
+    // add event handler for mouse over/off bar event
+    setTimeout(() => { 
+        svg.selectAll(".rightBars")
+            .on("mouseover", onBarEffect)
+            .on("mouseout", offBarEffect);
+        svg.selectAll(".leftBars")
+            .on("mouseover", onBarEffect)
+            .on("mouseout", offBarEffect);
+    }, 7000);
 }
 
 function removeThirdGraph() {
@@ -368,14 +428,17 @@ function drawFourthGraph() {
         .attr("id", "flooding")
         .attr("width", width*0.8)
         .attr("opacity", 0)
-        .attr('xlink:href', "images/animation.gif")
+        .attr('xlink:href', "Assets/Images/animation.gif")
         .attr("alt", "This is an animation of three people walking");
+
+    // animation for displaying gif
     d3.select("#flooding")
         .transition()
         .duration(800)
         .attr("opacity", 1);
 }
 
+// function for removing fourth chart
 function removeFourthGraph() {
     var floodingPic = svg.select("#flooding");
     floodingPic
@@ -399,7 +462,7 @@ function drawFifthGraph() {
         .attr("x", 100)
         .attr("y", 80)
         .attr("opacity", 0)
-        .attr('xlink:href', "images/future.webp")
+        .attr('xlink:href', "Assets/Images/future.webp")
         .attr("alt", "This is an illustration of a city");
     d3.select("#future")
         .transition()
@@ -407,6 +470,7 @@ function drawFifthGraph() {
         .attr("opacity", 1);
 }
 
+// function for removing fifth chart
 function removeFifthGraph() {
     var futurePic = svg.select("#future");
     futurePic
@@ -418,9 +482,9 @@ function removeFifthGraph() {
 
 
 
-////////////////////////////////////////////
-// Functions for handling arrow up and down
-////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+// Functions for handling clicking arrow up and down buttons
+/////////////////////////////////////////////////////////////
 function handleFirstPageDown(event) {
     removeFirstGraph();
     setTimeout(() => {drawSecondGraph();}, 1200);
@@ -473,6 +537,7 @@ function handleFifthPageUp(event) {
 ////////////////////////////////////////////////
 // Functions for handling arrow key up and down
 ////////////////////////////////////////////////
+// function for handling pressing arrow key down
 function handleKeyDown(event) {
     var keyCode = event.keyCode;
     if(keyCode==40){
@@ -498,6 +563,7 @@ function handleKeyDown(event) {
     }
 }
 
+// function for handling pressing arrow key up
 function handleKeyUp(event) {
     var keyCode = event.keyCode;
     if(keyCode==38){
@@ -570,8 +636,12 @@ fifthPageArrowUp.addEventListener("click", handleFifthPageUp, false);
 document.addEventListener("keydown", handleKeyDown, false);
 document.addEventListener("keyup", handleKeyUp, false);
 
-
-
-
+///////////
+//Citation
+///////////
+//Animation path in D3: https://bl.ocks.org/basilesimon/f164aec5758d16d51d248e41af5428e4
+//nyc-map: generated from map box
+//flooding: from Deamstime
+//future: from iStock
 
 
